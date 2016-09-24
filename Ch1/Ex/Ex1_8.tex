@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{numprint}
+
+
+\author{Jesse Michael Bannon (jmbannon)}
+\title{Exercise 1.8}
+
+\begin{document}
+
+\maketitle
+
+Let $N$ be the number of independent marbles drawn from the input space $X = \{Green, Red\}$. We denote the probability of picking a red marble at random $\mu$ a picking a green marble $(1 - \mu)$. After choosing $N$ samples we denote the fraction of red marbles as $v$.
+
+\smallskip
+
+If $\mu = 0.9$, what is the probability that a sample of 10 marbles will have $v \le 0.1$?
+
+\medskip
+
+We use binomial distribution to calculate the probability.
+\begin{align*}
+f(k, N, p)&=Pr(Red = 1) \\
+          &=\binom{N}{k} p^k(1-p)^{N-k} \\
+          &=\binom{10}{1}0.9^{1}(1 - 0.9)^{10-1} \\
+          &=\frac{10!}{1(10-1)!}0.9 * 0.1^9 \\
+          &=10 * 0.9 * 0.1^9 \\
+          &=9 * 10^{-9}
+\end{align*}
+
+\end{document}
